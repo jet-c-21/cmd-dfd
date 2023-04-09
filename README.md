@@ -17,12 +17,14 @@ shc -f cmd-dfd.sh -o cmd-dfd && sudo mv cmd-dfd /usr/local/bin/
 ```shell
 git clone https://github.com/jet-c-21/cmd-dfd.git && \
 cd cmd-dfd && \
-./amd64_install.sh
+./amd64_install.sh && \
+cd ~ && cmd-dfd -V
 ```
 
 ### arm64
 ```shell
 git clone https://github.com/jet-c-21/cmd-dfd.git && \
 cd cmd-dfd && \
-./arm64_install.sh
+./arm64_install.sh && \
+cd ~ && cmd-dfd -V
 ```

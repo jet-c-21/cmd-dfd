@@ -22,5 +22,7 @@ cd cmd-dfd && \
 
 ### arm64
 ```shell
-
+git clone https://github.com/jet-c-21/cmd-dfd.git && \
+cd cmd-dfd && \
+./arm64_install.sh
 ```

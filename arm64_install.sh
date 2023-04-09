@@ -5,4 +5,5 @@ sudo cp cmd-dfd.sh /usr/local/bin/cmd-dfd
 cd ..
 rm -rf cmd-dfd
 cd ~
+pwd
 cmd-dfd -V

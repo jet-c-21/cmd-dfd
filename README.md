@@ -19,4 +19,3 @@ cd .. && \
 rm -rf cmd-dfd && \
 cmd-dfd -V
 ```
-

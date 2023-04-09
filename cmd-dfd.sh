@@ -76,7 +76,7 @@ initial_space=$(df --output=avail --block-size=1K "$TARGET_PATH" | tail -1)
 final_space=$(df --output=avail --block-size=1K "$TARGET_PATH" | tail -1)
 
 # Calculate the difference in disk space
-space_diff=$((initial_space - final_space))
+space_diff=$((final_space - initial_space))
 
 # Print the difference in a human-readable format
 if [ $space_diff -gt 0 ]; then

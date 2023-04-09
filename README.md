@@ -22,6 +22,7 @@ cd ~ && cmd-dfd -V
 ```
 
 ### arm64
+> Note: for arm architecture, currently cannot convert the shell script to binary, so the installation will copy the shell script to ```/usr/local/bin``` directly
 ```shell
 git clone https://github.com/jet-c-21/cmd-dfd.git && \
 cd cmd-dfd && \

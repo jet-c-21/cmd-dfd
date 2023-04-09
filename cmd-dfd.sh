@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e
 
 VERSION=1.0.0
@@ -70,7 +69,10 @@ done
 initial_space=$(df --output=avail --block-size=1K "$TARGET_PATH" | tail -1)
 
 # Run the input command
-"$@"
+input_cmd="$*"
+input_cmd=${input_cmd//+/'&&'} # replace '+' in input_cmd to '&&'
+#echo "input_cmd : $input_cmd"
+eval "$input_cmd"
 
 # Calculate disk free space after running the command
 final_space=$(df --output=avail --block-size=1K "$TARGET_PATH" | tail -1)
@@ -94,3 +96,14 @@ fi
 
 # Print available free disk space
 display_available_space "$final_space"
+
+
+# here's the shell to calculate the disk space change after execute the input command user input
+# how ever if user enter smth like this:
+# $ ./cmd-dfd.sh ls && pwd
+# it will treat the input command just "ls" not include "pwd"
+# update the shell to let the shell to run all the command
+# test case 1:
+# $ ./cmd-dfd.sh cmd_1 && cmd_2
+# $ ./cmd-dfd.sh cmd_1 && \
+#    cmd_2

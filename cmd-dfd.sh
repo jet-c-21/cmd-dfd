@@ -52,7 +52,7 @@ while [ "$#" -gt 0 ]; do
       exit 0
       ;;
     -V|--version)
-      echo "cmd-dfd version $VERSION"
+      echo "cmd-dfd version : $VERSION"
       exit 0
       ;;
     -p|--path)
